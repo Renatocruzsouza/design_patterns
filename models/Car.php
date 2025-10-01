@@ -20,7 +20,7 @@ class Car {
         $this->brand = $brand;
     }
     public  function getKm() {
-        return $this->id;
+        return $this->km;
     }
     public  function setKm($km) {
         $this->km = $km;
@@ -31,4 +31,11 @@ class Car {
     public  function setColor($color) {
         $this->color = $color;
     }
+}
+
+interface carDAO {
+
+   public function create(Car $car);
+   public function findAll();
+
 }
